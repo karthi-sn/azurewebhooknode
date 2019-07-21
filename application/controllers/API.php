@@ -21,7 +21,7 @@ class API extends REST_Controller {
     $data = json_decode($object);
     $event = $data->eventType;
    
-    $url = 'https://chat.googleapis.com/v1/spaces/AAAAyRpDgXg/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=BTpl8JcgmnW9HpCyjHTB0uhooci2V4qzm-QpjTDeqnA%3D';
+    $url = 'webhook url from hangout chat room';
     $headers = array ('Content-Type: application/json; charset=UTF-8');
     $json = new stdClass(); 
     if($event == 'build.complete'){
@@ -54,7 +54,7 @@ class API extends REST_Controller {
     $data = json_decode($object);
     $event = $data->eventType;
    
-    $url = 'https://chat.googleapis.com/v1/spaces/AAAAyRpDgXg/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=BTpl8JcgmnW9HpCyjHTB0uhooci2V4qzm-QpjTDeqnA%3D';
+    $url = 'webhook url from hangout chat room';
     $headers = array ('Content-Type: application/json; charset=UTF-8');
     $json = new stdClass(); 
   
@@ -70,11 +70,11 @@ class API extends REST_Controller {
     } else if($event == 'ms.vss-release.deployment-completed-event'){
       $text = 'Deployment Completed';
       $card["cards"]["sections"]["widgets"]["buttons"]["textButton"]["text"]="Visit Website";
-      $card["cards"]["sections"]["widgets"]["buttons"]["textButton"]["onClick"]["openLink"]["url"]="https://splitxpress.softwaydev.com";
+      $card["cards"]["sections"]["widgets"]["buttons"]["textButton"]["onClick"]["openLink"]["url"]="website url";
     }
 
     $card["cards"]["header"]["title"] = $text;
-    $card["cards"]["header"]["imageUrl"] = "https://daikincomfort.com/images/favicons/apple-touch-icon.png";
+    $card["cards"]["header"]["imageUrl"] = "url of website image";
     $card["cards"]["header"]["imageStyle"]= "IMAGE";
     //$card["cards"]["sections"]["widgets"]["textParagraph"]["text"]='</b>'.$data->detailedMessage->text.'</b>';
     $result = json_encode($card);
@@ -98,7 +98,7 @@ class API extends REST_Controller {
     $data = json_decode($object);
     $event = $data->eventType;
     
-    $url = 'https://chat.googleapis.com/v1/spaces/AAAAV6g4yWE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=GHTOG_uAySmNmHKeYijbdJYn4alcAuOSQXlxxDAC7MQ%3D';
+    $url = 'webhook url from hangout chat room';
     $headers = array ('Content-Type: application/json; charset=UTF-8');
     $json = new stdClass(); 
   
@@ -115,12 +115,12 @@ class API extends REST_Controller {
     } else if($event == 'ms.vss-release.deployment-completed-event'){
       $text = 'Deployment Completed';
       $card["cards"]["sections"]["widgets"]["buttons"]["textButton"]["text"]="Visit Website";
-      $card["cards"]["sections"]["widgets"]["buttons"]["textButton"]["onClick"]["openLink"]["url"]="https://splitxpress.softwaydev.com";
+      $card["cards"]["sections"]["widgets"]["buttons"]["textButton"]["onClick"]["openLink"]["url"]="web site uel";
       $card["cards"]["sections"]["widgets"]["textParagraph"]["text"]='</b>'.$data->detailedMessage->text.'</b>';
     }
 
     $card["cards"]["header"]["title"] = $text;
-    $card["cards"]["header"]["imageUrl"] = "https://daikincomfort.com/images/favicons/apple-touch-icon.png";
+    $card["cards"]["header"]["imageUrl"] = "website logo image ";
     $card["cards"]["header"]["imageStyle"]= "IMAGE";
     $result = json_encode($card);
     
